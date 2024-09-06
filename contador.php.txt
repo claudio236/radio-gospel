@@ -1,0 +1,27 @@
+<?php
+// Caminho para o arquivo de contagem de visitantes
+$arquivo = 'contador.txt';
+
+// Verifica se o arquivo já existe, caso contrário, cria-o com o valor 0
+if (!file_exists($arquivo)) {
+    $handle = fopen($arquivo, 'w');
+    fwrite($handle, '0');
+    fclose($handle);
+}
+
+// Lê o número atual de visitantes
+$handle = fopen($arquivo, 'r');
+$visitantes = (int)fread($handle, 20);
+fclose($handle);
+
+// Incrementa o contador de visitantes
+$visitantes++;
+
+// Escreve o novo número de visitantes no arquivo
+$handle = fopen($arquivo, 'w');
+fwrite($handle, $visitantes);
+fclose($handle);
+
+// Exibe o número de visitantes
+echo $visitantes;
+?>

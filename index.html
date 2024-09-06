@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel Top Web FM Hits</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rádio Gospel Top Web FM Hits</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#programacao">Programação</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Player de Rádio -->
+    <section id="home">
+        <h2>Bem-vindo à Rádio Gospel Top Web FM Hits!</h2>
+        <p>A melhor rádio gospel online para você.</p>
+        <audio id="radioPlayer" controls>
+            <source src="https://stream.zeno.fm/9ynkk3mbazzuv" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </section>
+
+    <!-- Informações de Streaming -->
+    <section id="informacoesStream">
+        <h2>Informações de Transmissão</h2>
+        <p id="musicaAtual">Tocando agora: Carregando...</p>
+        <p id="programaAtual">Programa: Carregando...</p>
+    </section>
+
+    <!-- Programação -->
+    <section id="programacao">
+        <h2>Programação</h2>
+        <ul>
+            <li>08:00 - Programa A</li>
+            <li>10:00 - Programa B</li>
+            <li>12:00 - Programa C</li>
+        </ul>
+    </section>
+
+    <!-- Equipe -->
+    <section id="equipe">
+        <h2>Conheça nossa Equipe</h2>
+        <div class="equipe-membro">
+            <img src="locutor1.jpg" alt="Locutor 1">
+            <h3>Locutor 1</h3>
+            <p>Descrição do Locutor 1.</p>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <form action="envia_contato.php" method="post">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Contador de Visitantes -->
+    <section id="contadorVisitantes">
+        <h2>Contador de Visitantes</h2>
+        <p>Visitantes: <span id="contador"></span></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gospel Top Web FM Hits. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script de Integração do Tawk.to para Chat ao Vivo -->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/SEU_ID_DE_CHAT/1gkni4f7e';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+
+    <!-- Scripts JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
